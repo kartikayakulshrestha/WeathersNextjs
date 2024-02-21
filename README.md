@@ -1,10 +1,18 @@
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
 ## Getting Started
+ <h3>Playing and Understanding React and Next js Day by Day</h3>
+
+https://github.com/kartikayakulshrestha/WeathersNextjs/assets/126651238/7815cb33-71b1-4a92-8386-8f32cf83469e
+
 
 First, run the development server:
 
 ```bash
+
+
+
+
 npm run dev
 # or
 yarn dev
