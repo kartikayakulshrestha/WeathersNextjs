@@ -1,6 +1,6 @@
 "use client"
 import { useEffect , useState } from "react"
-
+import "./globals.css"
 
 const page = () => {
 
@@ -33,11 +33,9 @@ const page = () => {
       humid:a.current.humidity
     }])
   }
-  if(lo.length===0){
-  hell()
-  }
   
-})
+  hell()
+},[])
 async function lick(){
     
     let x=await fetch(`https://api.weatherapi.com/v1/current.json?key=797cb12a84bf4eaab8f140648230808&q=${location}&aqi=no&lang=en`)  
@@ -65,7 +63,8 @@ async function lick(){
   return (
 
     <>
-      <h1 className="text-center mt-4">Weather app</h1>
+    
+      <h1 className="text-center mt-4 ">Weather app</h1>
       <div className="container">
       <div className="ramesh">  
       <h3>Write location for which you want Temperature</h3><input className="inp mt-4" type="text" onChange={(e)=>{setlocation(e.target.value)}} placeholder="Name of the place" ></input>
@@ -76,31 +75,30 @@ async function lick(){
         
         
         
-        <div className="row">
+        <div className="row ">
       {
           lo.map((e)=>
           
           {
-            return <>
-            <div class="card col-6 mt-5">
-            <img src={`https://${e.imgI}`} width={100} height={100} />
+            return <div className="card col-4 mt-3 p-3" key={e.id} >
+            <img src={`https://${e.imgI}`} width={150} height={150} />
       
-            <div class="card-body">
+            <div className="card-body">
             
-            <h4 class="card-title">{e.kname}</h4> <h4>{e.tc}<sup>o</sup>C - {e.tf}<sup>o</sup>F</h4>
+            <h4 className="card-title">{e.kname}</h4> <h4>{e.tc}<sup>o</sup>C - {e.tf}<sup>o</sup>F</h4>
             <p className="d-inline-block"> {e.rname}, {e.cname} </p>
             <h5>{e.textI}</h5>
             <hr />
-            <p class="card-text">TimeZone  : {e.tz}</p>
+            <p className="card-text">TimeZone  : {e.tz}</p>
             </div>
-            <ul class="list-group list-group-flush">
-                <li class="list-group-item">Clouds :{e.cloud}</li>
-                <li class="list-group-item">Pressure : {e.pressure} MilliBar</li>
-                <li class="list-group-item">Humidity : {e.humid} RH</li>
+            <ul className="list-group list-group-flush">
+                <li className="list-group-item">Clouds :{e.cloud}</li>
+                <li className="list-group-item">Pressure : {e.pressure} MilliBar</li>
+                <li className="list-group-item">Humidity : {e.humid} RH</li>
             </ul>
             </div>
             
-      </>}
+      }
       )
       
       }
