@@ -9,9 +9,7 @@ export default function RootLayout({ children }) {
   
   return (
     <html lang="en">
-    <head>
-    <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
-    </head>
+    
       <body>{children}</body>
       <Script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" />
     </html>
