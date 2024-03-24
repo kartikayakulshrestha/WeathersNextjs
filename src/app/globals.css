@@ -12,7 +12,11 @@ background: linear-gradient(90deg, rgba(255,255,255,1) 0%, rgba(255,127,151,1) 0
     width: 40%;
     margin-left: 50px;
 }
-
+@media screen and (max-width: 850px) {
+    .card{
+        width: 79%;
+    }
+}
 .ramesh{
     text-align: center;
 
