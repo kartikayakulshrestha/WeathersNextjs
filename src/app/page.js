@@ -15,7 +15,7 @@ const page = () => {
     let x=await fetch("https://api.ipify.org/?format=json")
     let r=await x.json();
 
-    let xx=await fetch(`http://api.weatherapi.com/v1/current.json?key=797cb12a84bf4eaab8f140648230808&q=${r.ip}&aqi=no&lang=en`)
+    let xx=await fetch(`https://api.weatherapi.com/v1/current.json?key=797cb12a84bf4eaab8f140648230808&q=${r.ip}&aqi=no&lang=en`)
     let a=await xx.json();
     
     setlo([{
@@ -40,7 +40,7 @@ const page = () => {
 })
 async function lick(){
     
-    let x=await fetch(`http://api.weatherapi.com/v1/current.json?key=797cb12a84bf4eaab8f140648230808&q=${location}&aqi=no&lang=en`)  
+    let x=await fetch(`https://api.weatherapi.com/v1/current.json?key=797cb12a84bf4eaab8f140648230808&q=${location}&aqi=no&lang=en`)  
     let a=await x.json()
     let o=lo
     o.push({
